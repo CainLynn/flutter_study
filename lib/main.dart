@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'demo/bottom_navigation_bar_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/hello_demo.dart';
+import 'demo/drawer_demo.dart';
 
 void main() {
   runApp(App());
@@ -27,6 +29,7 @@ class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     
+    // Cain 页签Controller控制器
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -46,6 +49,7 @@ class Home extends StatelessWidget{
             ),
           ],
           elevation: 0.0,
+          // Cain 页签Bar按钮
           bottom: TabBar(
             unselectedLabelColor: Colors.black26,
             indicatorColor: Colors.black54,
@@ -64,45 +68,18 @@ class Home extends StatelessWidget{
             ],
           ),
         ),
+        // Cain 页签View视图
         body: TabBarView(
           children: <Widget>[
-            Icon(Icons.filter_9_plus, size: 128, color: Colors.black12),
+            ListViewDemo(),
             Icon(Icons.scatter_plot, size: 128, color: Colors.black12),
             Icon(Icons.calendar_view_day, size: 128, color: Colors.black12),
           ],
         ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(
-                child: Text("HEADER"),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100]
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.message, color: Colors.black12, size: 22),
-                title: Text("Messages", textAlign: TextAlign.right,),
-                trailing: Icon(Icons.message, color: Colors.black12, size: 22),
-                
-              ),
-              ListTile(
-                leading: Icon(Icons.favorite, color: Colors.black12, size: 22),
-                title: Text("Favorite", textAlign: TextAlign.right,),
-                trailing: Icon(Icons.favorite, color: Colors.black12, size: 22),
-                
-              ),
-              ListTile(
-                leading: Icon(Icons.settings, color: Colors.black12, size: 22),
-                title: Text("Settings", textAlign: TextAlign.right,),
-                trailing: Icon(Icons.settings, color: Colors.black12, size: 22),
-                onTap: () => Navigator.pop(context),
-                
-              ),
-            ],
-          ),
-        ),
+        // Cain 侧边滑动栏
+        drawer: DrawerDemo(),
+        // Cain 底部导航栏
+        bottomNavigationBar: BottomNavigationBarDemo(),
       ),
     );
   }

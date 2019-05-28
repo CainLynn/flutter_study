@@ -3,6 +3,7 @@ import 'demo/bottom_navigation_bar_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/hello_demo.dart';
 import 'demo/drawer_demo.dart';
+import 'demo/basic_demo.dart';
 
 void main() {
   runApp(App());
@@ -60,7 +61,7 @@ class Home extends StatelessWidget{
                 icon: Icon(Icons.schedule),
               ),
               Tab(
-                icon: Icon(Icons.data_usage),
+                icon: Icon(Icons.home),
               ),
               Tab(
                 icon: Icon(Icons.dashboard),
@@ -72,7 +73,7 @@ class Home extends StatelessWidget{
         body: TabBarView(
           children: <Widget>[
             ListViewDemo(),
-            Icon(Icons.scatter_plot, size: 128, color: Colors.black12),
+            BasicDemo(),
             Icon(Icons.calendar_view_day, size: 128, color: Colors.black12),
           ],
         ),

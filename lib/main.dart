@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/demo/sliver_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/hello_demo.dart';
 import 'demo/drawer_demo.dart';
 import 'demo/basic_demo.dart';
+import 'demo/layout_demo.dart';
+import 'demo/view_demo.dart';
 
 void main() {
   runApp(App());
@@ -16,6 +19,7 @@ class App extends StatelessWidget{
     // Cain MateriaApp
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // home: Home(),
       home: Home(),
       theme: ThemeData(
         primaryColor: Colors.yellow,
@@ -32,7 +36,7 @@ class Home extends StatelessWidget{
     
     // Cain 页签Controller控制器
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
@@ -41,7 +45,7 @@ class Home extends StatelessWidget{
           //   tooltip: "Navigration",
           //   onPressed: () => debugPrint("Navigration Button is Pressed"),
           // ),
-          title: Text("Hello"),
+          title: Text("Flutter Study For Cain"),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
@@ -66,6 +70,9 @@ class Home extends StatelessWidget{
               Tab(
                 icon: Icon(Icons.dashboard),
               ),
+              Tab(
+                icon: Icon(Icons.view_agenda),
+              ),
             ],
           ),
         ),
@@ -74,7 +81,9 @@ class Home extends StatelessWidget{
           children: <Widget>[
             ListViewDemo(),
             BasicDemo(),
-            Icon(Icons.calendar_view_day, size: 128, color: Colors.black12),
+            LayoutDemo(),
+            // ViewDemo(),
+            SliverDemo()
           ],
         ),
         // Cain 侧边滑动栏

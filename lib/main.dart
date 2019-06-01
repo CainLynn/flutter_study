@@ -7,6 +7,7 @@ import 'demo/drawer_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
+import 'demo/navigation_demo.dart';
 
 void main() {
   runApp(App());
@@ -21,6 +22,11 @@ class App extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       // home: Home(),
       home: Home(),
+      initialRoute: "/",
+      routes: {
+        "/navigationDemo": (context) => NavigationDemo(),
+        "/about": (context) => PageDemo(title: "About"),
+      },
       theme: ThemeData(
         primaryColor: Colors.yellow,
         highlightColor: Color.fromRGBO(225, 250, 130, 180),

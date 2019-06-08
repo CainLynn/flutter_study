@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/demo/from_demo.dart';
+import 'package:flutter_study/demo/material_components.dart';
 import 'package:flutter_study/demo/sliver_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import './demo/listview_demo.dart';
@@ -23,11 +24,12 @@ class App extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       // home: Home(),
       home: Home(),
-      initialRoute: "/fromDemo",
+      initialRoute: "/mcd",
       routes: {
         "/navigationDemo": (context) => NavigationDemo(),
         "/about": (context) => PageDemo(title: "About"),
-        "/fromDemo": (context) => FromDemo()
+        "/fromDemo": (context) => FromDemo(),
+        "/mcd": (context) => MaterialComponents()
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,

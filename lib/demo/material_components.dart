@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'button_demo.dart';
 import 'floating_action_button_demo.dart';
 import 'popup_menu_button_demo.dart';
+import 'from_demo.dart';
+import 'check_demo.dart';
+import 'radio_Demo.dart';
+import 'switch_Demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   const MaterialComponents({Key key}) : super(key: key);
@@ -16,7 +20,23 @@ class MaterialComponents extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           ListItem(
-            title: "PopMenuButtonDemo",
+            title: "Switch",
+            page: SwitchDemo(),
+          ),
+          ListItem(
+            title: "Radio",
+            page: RadioDemo(),
+          ),
+          ListItem(
+            title: "Checkbox",
+            page: CheckboxDemo(),
+          ),
+          ListItem(
+            title: "Form",
+            page: FromDemo(),
+          ),
+          ListItem(
+            title: "PopMenuButton",
             page: PopupMenuButtonDemo(),
           ),
           ListItem(
@@ -24,7 +44,7 @@ class MaterialComponents extends StatelessWidget {
             page: FloatingActionButtonDemo(),
           ),
           ListItem(
-            title: "ButtonDemo",
+            title: "Button",
             page: ButtonDemo(),
           ),
         ],

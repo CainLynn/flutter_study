@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/demo/alert_dialog_demo.dart';
+import 'package:flutter_study/demo/bottom_sheet_demo.dart';
 import 'package:flutter_study/demo/date_time_demo.dart';
+import 'package:flutter_study/demo/expansion_panel_demo.dart';
 import 'package:flutter_study/demo/simple_dialog_demo.dart';
 import 'package:flutter_study/demo/slider_demo.dart';
+import 'package:flutter_study/demo/snack_bar_demo.dart';
 import 'button_demo.dart';
 import 'floating_action_button_demo.dart';
 import 'popup_menu_button_demo.dart';
@@ -22,6 +26,22 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: "ExpansionPanelDemo",
+            page: ExpansionPanelDemo(),
+          ),
+          ListItem(
+            title: "SnackBarDemo",
+            page: SnackBarDemo(),
+          ),
+          ListItem(
+            title: "BottomSheet",
+            page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: "AlertDialog",
+            page: AlertDialogDemo(),
+          ),
           ListItem(
             title: "SimpleDialog",
             page: SimpleDialogDemo(),

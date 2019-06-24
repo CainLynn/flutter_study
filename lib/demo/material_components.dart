@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/demo/alert_dialog_demo.dart';
 import 'package:flutter_study/demo/bottom_sheet_demo.dart';
+import 'package:flutter_study/demo/card_demo.dart';
+import 'package:flutter_study/demo/chip_demo.dart';
+import 'package:flutter_study/demo/data_table_demo.dart';
 import 'package:flutter_study/demo/date_time_demo.dart';
 import 'package:flutter_study/demo/expansion_panel_demo.dart';
+import 'package:flutter_study/demo/paginated_data_table_demo.dart';
 import 'package:flutter_study/demo/simple_dialog_demo.dart';
 import 'package:flutter_study/demo/slider_demo.dart';
 import 'package:flutter_study/demo/snack_bar_demo.dart';
+import 'package:flutter_study/demo/stepper_demo.dart';
 import 'button_demo.dart';
 import 'floating_action_button_demo.dart';
 import 'popup_menu_button_demo.dart';
 import 'from_demo.dart';
 import 'check_demo.dart';
-import 'radio_Demo.dart';
-import 'switch_Demo.dart';
+import 'radio_demo.dart';
+import 'switch_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   const MaterialComponents({Key key}) : super(key: key);
@@ -26,6 +31,26 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: "StepperDemo",
+            page: StepperDemo(),
+          ),
+          ListItem(
+            title: "CardDemo",
+            page: CardDemo(),
+          ),
+          ListItem(
+            title: "PaginatedDataTableDemo",
+            page: PaginatedDataTableDemo(),
+          ),
+          ListItem(
+            title: "DataTableDemo",
+            page: DataTableDemo(),
+          ),
+          ListItem(
+            title: "ChipDemo",
+            page: ChipDemo(),
+          ),
           ListItem(
             title: "ExpansionPanelDemo",
             page: ExpansionPanelDemo(),

@@ -1,9 +1,12 @@
 class Post {
-  const Post({this.title, this.author, this.imageUrl});
+  Post({this.title, this.author, this.imageUrl});
 
   final String title;
   final String author;
   final imageUrl;
+  bool selected = false;
+
+  String description = "Esse ut nulla velit Esse ut nulla velit Esse ut nulla velit Esse ut nulla velit ..........";
 }
 
 final List<Post> posts = [

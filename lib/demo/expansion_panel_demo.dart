@@ -100,24 +100,3 @@ class _ExpansionPanelDemoState extends State<ExpansionPanelDemo> {
         ));
   }
 }
-
-class SnackBarButton extends StatelessWidget {
-  const SnackBarButton({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: FlatButton(
-        child: Text("Open SnackBar"),
-        onPressed: () {
-          Scaffold.of(context).showSnackBar(SnackBar(
-              content: Text("Processing..."),
-              action: SnackBarAction(
-                label: "OK",
-                onPressed: () {},
-              )));
-        },
-      ),
-    );
-  }
-}

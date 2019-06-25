@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/demo/from_demo.dart';
 import 'package:flutter_study/demo/material_components.dart';
 import 'package:flutter_study/demo/sliver_demo.dart';
+import 'package:flutter_study/demo/state/state_management_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import './demo/listview_demo.dart';
 import './demo/hello_demo.dart';
@@ -29,7 +30,8 @@ class App extends StatelessWidget{
         "/navigationDemo": (context) => NavigationDemo(),
         "/about": (context) => PageDemo(title: "About"),
         "/fromDemo": (context) => FromDemo(),
-        "/mcd": (context) => MaterialComponents()
+        "/mcd": (context) => MaterialComponents(),
+        "/state-management": (context) => StateManagementDemo()
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,

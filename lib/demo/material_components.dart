@@ -11,6 +11,7 @@ import 'package:flutter_study/demo/simple_dialog_demo.dart';
 import 'package:flutter_study/demo/slider_demo.dart';
 import 'package:flutter_study/demo/snack_bar_demo.dart';
 import 'package:flutter_study/demo/stepper_demo.dart';
+import 'package:flutter_study/demo/stream/stream_demo.dart';
 import 'button_demo.dart';
 import 'floating_action_button_demo.dart';
 import 'popup_menu_button_demo.dart';
@@ -31,6 +32,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: "StreamDemo",
+            page: StreamDemo(),
+          ),
           ListItem(
             title: "StepperDemo",
             page: StepperDemo(),

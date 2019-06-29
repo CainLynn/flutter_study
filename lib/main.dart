@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/demo/from_demo.dart';
 import 'package:flutter_study/demo/material_components.dart';
+import 'package:flutter_study/demo/rxdart/rxdart_demo.dart';
 import 'package:flutter_study/demo/sliver_demo.dart';
 import 'package:flutter_study/demo/state/state_management_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
@@ -25,13 +26,14 @@ class App extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       // home: Home(),
       home: Home(),
-      initialRoute: "/mcd",
+      initialRoute: "/rxdart",
       routes: {
         "/navigationDemo": (context) => NavigationDemo(),
         "/about": (context) => PageDemo(title: "About"),
         "/fromDemo": (context) => FromDemo(),
         "/mcd": (context) => MaterialComponents(),
-        "/state-management": (context) => StateManagementDemo()
+        "/state-management": (context) => StateManagementDemo(),
+        "/rxdart": (context) => RxDartDemo(),
       },
       theme: ThemeData(
         primaryColor: Colors.yellow,
